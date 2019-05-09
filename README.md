@@ -18,7 +18,7 @@
 
 #### Edit following line
 
-> ExecStart=/usr/bin/dockerd --insecure-registry <registry-ip>:5000
+> ExecStart=/usr/bin/dockerd --insecure-registry {registry-ip}:5000
 
 ## Pushing local image
 
