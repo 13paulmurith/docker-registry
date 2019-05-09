@@ -1,0 +1,32 @@
+version: '2'
+
+networks:
+  registry:
+    driver: bridge
+
+services:
+  images:
+    image: registry:2
+    container_name: registry-store
+    privileged: true
+    networks:
+      - registry
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - "/home/docker/registry/data:/var/lib/registry"
+
+
+  web:
+    image: hyper/docker-registry-web
+    container_name: registry-web
+    restart: always
+    depends_on:
+      - images
+    networks:
+      - registry
+    volumes:
+      - "/home/docker/registry/config.yml:/conf/config.yml:ro"
+    ports:
+      - "8081:8080"
