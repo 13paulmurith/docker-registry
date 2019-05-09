@@ -22,7 +22,7 @@
 
 ## Pushing local image
 
-} docker image ls
+> docker image ls
 
 > docker image tag {local-image} {registry-host}:5000/{image-name}:{tag}
   
