@@ -2,7 +2,7 @@
 
 ## Run 
 
-> git clone https://github.com/13paulmurith/docker-repository.git
+> git clone https://github.com/13paulmurith/docker-registry.git
 
 > docker-compose up -d
 
