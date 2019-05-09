@@ -6,7 +6,7 @@
 
 > docker-compose up -d
 
-> Access to the web ui : localhost:8081
+> Access to the web ui : http://localhost:8081
 
 ## Debug
 
@@ -18,7 +18,7 @@
 
 #### Edit following line
 
-> ExecStart=/usr/bin/dockerd --insecure-registry {registry-ip}:5000
+> ExecStart=/usr/bin/dockerd --insecure-registry <registry-ip}>5000
 
 ## Pushing local image
 
@@ -26,4 +26,4 @@
 
 > docker image tag <local-image> <registry-host>:5000/<image-name>:<tag>
   
-> docker push docker image tag mthenw/frontail 192.168.1.114/frontail
+> docker push <registry-host>:5000/<image-name>:<tag>
