@@ -18,12 +18,12 @@
 
 #### Edit following line
 
-> ExecStart=/usr/bin/dockerd --insecure-registry <registry-ip}>5000
+> ExecStart=/usr/bin/dockerd --insecure-registry {registry-ip}}5000
 
 ## Pushing local image
 
-> docker image ls
+} docker image ls
 
-> docker image tag <local-image> <registry-host>:5000/<image-name>:<tag>
+> docker image tag {local-image} {registry-host}:5000/{image-name}:{tag}
   
-> docker push <registry-host>:5000/<image-name>:<tag>
+> docker push {registry-host}:5000/{image-name}:{tag}
